@@ -38,9 +38,8 @@ describe('JsonFileBlockchain', () => {
     ]);
   });
 
-  it('should get chain height', async () => {
-    const height = await blockchainClient.getBlockCount();
-    expect(height).toStrictEqual(200);
+  it('should get block count', async () => {
+    expect(await blockchainClient.getBlockCount()).toStrictEqual(200);
   });
 
   it('should get block by height', async () => {
